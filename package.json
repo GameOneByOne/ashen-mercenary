@@ -1,0 +1,10 @@
+{
+  "name": "ashen-mercenary",
+  "version": "0.7.4",
+  "private": true,
+  "description": "灰烬佣兵：HTML/CSS/JavaScript 自动战斗文字 RPG",
+  "scripts": {
+    "test": "node tests/verify-v07.cjs && node tests/verify-ui-feedback.cjs && node tests/verify-boss-fix.cjs",
+    "start": "python3 -m http.server 8765"
+  }
+}
