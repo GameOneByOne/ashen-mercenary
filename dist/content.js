@@ -24,7 +24,7 @@ const REGION_DATA=[
 const REGIONS=REGION_DATA.map((r,i)=>{const scale=1.85**i,bossFactor=3*1.35**i;return {id:i,name:r[0],bossName:r[1],normals:r[2],elites:r[3],pool:r[4].split(' '),star:r[5],targetDay:r[6],scale,hp:Math.round(75*scale),attack:Math.round(8*scale),defense:Math.round(2*scale),gold:Math.round(8*1.67**i),xp:Math.round(14*1.55**i),scoutNeed:(i<5?3600:i<10?16000:22000),bossHp:Math.round(10500*scale*bossFactor),bossAttack:Math.round(105*scale*bossFactor),bossDefense:Math.round(25*scale*bossFactor),bossPower:Math.round(2300*scale*bossFactor)};});
 const TROOPS=[{id:'sword',name:'佣兵剑士',price:32,attack:3,defense:.15,hp:9},{id:'shield',name:'佣兵盾卫',price:38,attack:1.3,defense:.5,hp:20},{id:'bow',name:'佣兵射手',price:40,attack:4.2,defense:.05,hp:5}];
 const BUILDINGS=[
-{id:'hall',name:'营地主厅',desc:'扩展营地规模，开放其他设施。',effect:'每级开放更高设施等级，提高长期训练上限',max:16,requires:0,cost:100,mat:8},
+{id:'hall',name:'营地主厅',desc:'扩展营地规模，开放其他设施。',effect:'每级开放更高设施等级',max:16,requires:0,cost:100,mat:8},
 {id:'workshop',name:'工坊',desc:'强化装备槽位，打造指定部位。',effect:'每级允许槽位强化上限 +5，锻造对应等级区域装备',max:16,requires:1,cost:130,mat:10},
 {id:'barracks',name:'兵营',desc:'容纳并训练大规模佣兵。',effect:'容量 +250 / 级；佣兵基础属性 +8% / 级',max:24,requires:1,cost:160,mat:10},
 {id:'infirmary',name:'医务所',desc:'在营地恢复生命。',effect:'营地每秒恢复率 +1%；死亡休整时间缩短',max:16,requires:1,cost:110,mat:8},
@@ -33,7 +33,7 @@ const BUILDINGS=[
 {id:'academy',name:'研习所',desc:'研究战术，拆解闲置装备。',effect:'解锁装备分解；领主洞察 +3、领袖 +2 / 级',max:16,requires:2,cost:260,mat:12},
 {id:'warehouse',name:'仓库',desc:'储存装备和离线冒险收获。',effect:'装备容量 +60、离线上限 +1 小时 / 级',max:16,requires:1,cost:140,mat:9},
 {id:'market',name:'商栈',desc:'出售材料，扩大赏金收益。',effect:'金币收益 +5%、贪婪 +3 / 级',max:16,requires:2,cost:220,mat:10},
-{id:'altar',name:'领主祭坛',desc:'消耗金币和材料，强化领主自身。',effect:'领主自身装备与训练属性 +12% / 级；吸血 +0.3% / 级',max:16,requires:3,cost:350,mat:15}
+{id:'altar',name:'领主祭坛',desc:'消耗金币和材料，强化领主自身。',effect:'领主自身基础与装备属性 +12% / 级；吸血 +0.3% / 级',max:16,requires:3,cost:350,mat:15}
 ];
 const QUALITY=['普通','精良','大师','传说','至宝'];
 const QUALITY_MULT=[1,1.4,2.1,3.2,5];
