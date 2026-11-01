@@ -33,8 +33,7 @@ const BUILDINGS=[
 {id:'academy',name:'研习所',desc:'研究战术，拆解闲置装备。',effect:'解锁装备分解；领主洞察 +3、领袖 +2 / 级',max:16,requires:2,cost:260,mat:12},
 {id:'warehouse',name:'仓库',desc:'储存装备和离线冒险收获。',effect:'装备容量 +60、离线上限 +1 小时 / 级',max:16,requires:1,cost:140,mat:9},
 {id:'market',name:'商栈',desc:'出售材料，扩大赏金收益。',effect:'金币收益 +5%、贪婪 +3 / 级',max:16,requires:2,cost:220,mat:10},
-{id:'altar',name:'领主祭坛',desc:'消耗首领印记，强化领主自身。',effect:'领主自身装备与训练属性 +12% / 级；吸血 +0.3% / 级',max:16,requires:3,cost:350,mat:15}
+{id:'altar',name:'领主祭坛',desc:'消耗金币和材料，强化领主自身。',effect:'领主自身装备与训练属性 +12% / 级；吸血 +0.3% / 级',max:16,requires:3,cost:350,mat:15}
 ];
-const SPECIALS={potion:{name:'治疗药剂',desc:'立即恢复最大生命的 35%；战斗中可用'},scroll:{name:'洞察手札',desc:'永久洞察 +2'},seal:{name:'首领印记',desc:'首次击败每个区域 Boss 获得，用于领主祭坛进阶'}};
-const QUALITY=['普通','精良','稀有','史诗','传说'];
+const QUALITY=['普通','精良','大师','传说','至宝'];
 const QUALITY_MULT=[1,1.4,2.1,3.2,5];
