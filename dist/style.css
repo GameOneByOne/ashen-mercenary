@@ -44,10 +44,16 @@ main.app-layout{max-width:1600px;display:grid;grid-template-columns:minmax(230px
 
 .army-sort{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 12px;color:var(--muted);font-size:10px}.army-sort button[aria-pressed="true"]{background:#edf2e7;border-color:#9bac8c;color:#536645}.member-name{cursor:help;text-decoration:underline dotted #bcc5b2;text-underline-offset:4px}.member-name:focus-visible{outline:2px solid #8d9b80;outline-offset:3px}
 
-/* Compact map and camp cards retain readable labels and full hover details. */
-#mapGrid .map-card{min-height:32px;height:32px;padding:3px 10px;display:flex;flex-direction:column;justify-content:center;gap:0;min-width:0}
-#mapGrid .map-card strong{margin:0;line-height:1.2;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#mapGrid .map-card span{display:block;line-height:1.2;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#buildingList .building-card{min-height:48px;height:48px;padding:8px 12px;flex-direction:row;align-items:center;justify-content:space-between;gap:8px}
-#buildingList .building-card strong{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#buildingList .building-card span{margin-left:auto;flex-shrink:0;white-space:nowrap}
+/* Narrower cards keep their original height and expose full details on hover. */
+#mapGrid{grid-template-columns:repeat(12,minmax(0,1fr))}
+#mapGrid .map-card{min-height:94px;height:auto;min-width:0;padding:10px 4px}
+#mapGrid .map-card strong{margin:4px 0;line-height:1.4;overflow-wrap:anywhere}
+#mapGrid .map-card span{display:block;line-height:1.5;overflow-wrap:anywhere}
+#buildingList{grid-template-columns:repeat(8,minmax(0,1fr))}
+#buildingList .building-card{min-height:96px;height:auto;padding:10px 6px;flex-direction:row;align-items:center;justify-content:space-between;gap:4px}
+#buildingList .building-card strong{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px}
+#buildingList .building-card span{margin-left:auto;flex-shrink:0;white-space:nowrap;font-size:10px}
+@media(max-width:1100px){#mapGrid{grid-template-columns:repeat(9,minmax(0,1fr))}#buildingList{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:850px){#mapGrid{grid-template-columns:repeat(6,minmax(0,1fr))}#buildingList{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:600px){#buildingList .building-card{min-height:85px;padding:8px 4px}}
+@media(max-width:520px){#mapGrid .map-card{min-height:83px}}
